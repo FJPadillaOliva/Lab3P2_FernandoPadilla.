@@ -15,7 +15,10 @@ public class Lab3P2_FernandoPadilla {
         int opcion = 0;
         int opcion2 = 0;
         String lista = "";
+        boolean valido = false;
+        int total = 0;
         do {
+            valido = false;
             System.out.println("------------Menu------------\n"
                     + "1)Agregar\n"
                     + "2)Modificar\n"
@@ -34,8 +37,30 @@ public class Lab3P2_FernandoPadilla {
                     opcion2 = read.nextInt();
                     switch (opcion2) {
                         case 1:
-                            System.out.println("Ingrese la placa del vehiculo: ");
-                            String placa = read.next();
+                            valido = false;
+                            String placa = "";
+                            while (!valido) {
+                                System.out.println("Ingrese la placa del vehiculo: ");
+                                placa = read.next();
+                                if ((placa.length() == 7)
+                                        && ((placa.startsWith("H")))
+                                        && ((placa.substring(1, 3).matches("[A-Z]+"))
+                                        && placa.substring(4).matches("\\d+"))) {
+                                    valido = true;
+                                } else {
+                                    System.out.println("Formato no valido");
+                                }
+                            }
+                            for (Vehiculo t : vehiculos) {
+                                if (t.getPlaca().equals(placa)) {
+                                    System.out.println("Numero de placa repetido");
+                                    valido = false;
+                                    break;
+                                }
+                            }
+                            if (!valido) {
+                                break;
+                            }
                             System.out.println("Ingrese la marca del vehiculo: ");
                             read.nextLine();
                             String marca = read.nextLine();
@@ -63,8 +88,30 @@ public class Lab3P2_FernandoPadilla {
                             System.out.println("Agregado con exito");
                             break;
                         case 2:
-                            System.out.println("Ingrese la placa del vehiculo: ");
-                            placa = read.next();
+                            valido = false;
+                            placa = "";
+                            while (!valido) {
+                                System.out.println("Ingrese la placa del vehiculo: ");
+                                placa = read.next();
+                                if ((placa.length() == 7)
+                                        && ((placa.startsWith("B")))
+                                        && ((placa.substring(1, 3).matches("[A-Z]+"))
+                                        && placa.substring(4).matches("\\d+"))) {
+                                    valido = true;
+                                } else {
+                                    System.out.println("Formato no valido");
+                                }
+                            }
+                            for (Vehiculo t : vehiculos) {
+                                if (t.getPlaca().equals(placa)) {
+                                    System.out.println("Numero de placa repetido");
+                                    valido = false;
+                                    break;
+                                }
+                            }
+                            if (!valido) {
+                                break;
+                            }
                             System.out.println("Ingrese la marca del vehiculo: ");
                             read.nextLine();
                             marca = read.nextLine();
@@ -90,8 +137,30 @@ public class Lab3P2_FernandoPadilla {
                             System.out.println("Agregado con exito");
                             break;
                         case 3:
-                            System.out.println("Ingrese la placa del vehiculo: ");
-                            placa = read.next();
+                            valido = false;
+                            placa = "";
+                            while (!valido) {
+                                System.out.println("Ingrese la placa del vehiculo: ");
+                                placa = read.next();
+                                if ((placa.length() == 7)
+                                        && ((placa.startsWith("H")))
+                                        && ((placa.substring(1, 3).matches("[A-Z]+"))
+                                        && placa.substring(4).matches("\\d+"))) {
+                                    valido = true;
+                                } else {
+                                    System.out.println("Formato no valido");
+                                }
+                            }
+                            for (Vehiculo t : vehiculos) {
+                                if (t.getPlaca().equals(placa)) {
+                                    System.out.println("Numero de placa repetido");
+                                    valido = false;
+                                    break;
+                                }
+                            }
+                            if (!valido) {
+                                break;
+                            }
                             System.out.println("Ingrese la marca del vehiculo: ");
                             read.nextLine();
                             marca = read.nextLine();
@@ -145,8 +214,30 @@ public class Lab3P2_FernandoPadilla {
                             opcion2 = read.nextInt();
                             switch (opcion2) {
                                 case 1:
-                                    System.out.println("Ingrese la nueva placa: ");
-                                    String placa = read.next();
+                                    valido = false;
+                                    String placa = "";
+                                    while (!valido) {
+                                        System.out.println("Ingrese la placa del vehiculo: ");
+                                        placa = read.next();
+                                        if ((placa.length() == 7)
+                                                && ((placa.startsWith("H")))
+                                                && ((placa.substring(1, 3).matches("[A-Z]+"))
+                                                && placa.substring(4).matches("\\d+"))) {
+                                            valido = true;
+                                        } else {
+                                            System.out.println("Formato no valido");
+                                        }
+                                    }
+                                    for (Vehiculo t : vehiculos) {
+                                        if (t.getPlaca().equals(placa)) {
+                                            System.out.println("Numero de placa repetido");
+                                            valido = false;
+                                            break;
+                                        }
+                                    }
+                                    if (!valido) {
+                                        break;
+                                    }
                                     vehiculos.get(index).setPlaca(placa);
                                     break;
                                 case 2:
@@ -218,8 +309,30 @@ public class Lab3P2_FernandoPadilla {
                             opcion2 = read.nextInt();
                             switch (opcion2) {
                                 case 1:
-                                    System.out.println("Ingrese la nueva placa: ");
-                                    String placa = read.next();
+                                    valido = false;
+                                    String placa = "";
+                                    while (!valido) {
+                                        System.out.println("Ingrese la placa del vehiculo: ");
+                                        placa = read.next();
+                                        if ((placa.length() == 7)
+                                                && ((placa.startsWith("B")))
+                                                && ((placa.substring(1, 3).matches("[A-Z]+"))
+                                                && placa.substring(4).matches("\\d+"))) {
+                                            valido = true;
+                                        } else {
+                                            System.out.println("Formato no valido");
+                                        }
+                                    }
+                                    for (Vehiculo t : vehiculos) {
+                                        if (t.getPlaca().equals(placa)) {
+                                            System.out.println("Numero de placa repetido");
+                                            valido = false;
+                                            break;
+                                        }
+                                    }
+                                    if (!valido) {
+                                        break;
+                                    }
                                     vehiculos.get(index).setPlaca(placa);
                                     break;
                                 case 2:
@@ -286,8 +399,30 @@ public class Lab3P2_FernandoPadilla {
                             opcion2 = read.nextInt();
                             switch (opcion2) {
                                 case 1:
-                                    System.out.println("Ingrese la nueva placa: ");
-                                    String placa = read.next();
+                                    valido = false;
+                                    String placa = "";
+                                    while (!valido) {
+                                        System.out.println("Ingrese la placa del vehiculo: ");
+                                        placa = read.next();
+                                        if ((placa.length() == 7)
+                                                && ((placa.startsWith("H")))
+                                                && ((placa.substring(1, 3).matches("[A-Z]+"))
+                                                && placa.substring(4).matches("\\d+"))) {
+                                            valido = true;
+                                        } else {
+                                            System.out.println("Formato no valido");
+                                        }
+                                    }
+                                    for (Vehiculo t : vehiculos) {
+                                        if (t.getPlaca().equals(placa)) {
+                                            System.out.println("Numero de placa repetido");
+                                            valido = false;
+                                            break;
+                                        }
+                                    }
+                                    if (!valido) {
+                                        break;
+                                    }
                                     vehiculos.get(index).setPlaca(placa);
                                     break;
                                 case 2:
@@ -377,17 +512,19 @@ public class Lab3P2_FernandoPadilla {
                     index = read.nextInt();
                     if (index >= 0 && index < vehiculos.size()) {
                         if (vehiculos.get(index) instanceof Automovil) {
+                            total = 525 + 1200;
                             Boleta += "Numero de placa = " + vehiculos.get(index).getPlaca()
                                     + "\nMarca = " + vehiculos.get(index).getMarca()
                                     + "\nModelo = " + vehiculos.get(index).getModelo()
                                     + "\nTipo = " + vehiculos.get(index).getTipo()
                                     + "\nColor = " + vehiculos.get(index).getColor()
                                     + "\nAño = " + vehiculos.get(index).getAño()
-                                    + "\nTipo de combustible = " + ((Automovil)vehiculos.get(index)).getTipoC()
-                                    + "\nNumero de puertas = " + ((Automovil)vehiculos.get(index)).getNumP()
-                                    + "\nTipo de transmision = " + ((Automovil)vehiculos.get(index)).getTipoT()
-                                    + "\nNumero de asientos = " + ((Automovil)vehiculos.get(index)).getNumA();
+                                    + "\nTipo de combustible = " + ((Automovil) vehiculos.get(index)).getTipoC()
+                                    + "\nNumero de puertas = " + ((Automovil) vehiculos.get(index)).getNumP()
+                                    + "\nTipo de transmision = " + ((Automovil) vehiculos.get(index)).getTipoT()
+                                    + "\nNumero de asientos = " + ((Automovil) vehiculos.get(index)).getNumA();
                         } else if (vehiculos.get(index) instanceof Motocicleta) {
+                            total = 525 + 200;
                             Boleta += "Numero de placa = " + vehiculos.get(index).getPlaca()
                                     + "\nMarca = " + vehiculos.get(index).getMarca()
                                     + "\nModelo = " + vehiculos.get(index).getModelo()
@@ -398,6 +535,7 @@ public class Lab3P2_FernandoPadilla {
                                     + "\nPeso = " + ((Motocicleta) vehiculos.get(index)).getPeso() + "kg"
                                     + "\nConsumo = " + ((Motocicleta) vehiculos.get(index)).getConsumo() + "L/Km";
                         } else if (vehiculos.get(index) instanceof Autobus) {
+                            total = 525 + 1000;
                             Boleta += "Numero de placa = " + vehiculos.get(index).getPlaca()
                                     + "\nMarca = " + vehiculos.get(index).getMarca()
                                     + "\nModelo = " + vehiculos.get(index).getModelo()
@@ -410,6 +548,7 @@ public class Lab3P2_FernandoPadilla {
 
                         }
                         System.out.println(Boleta);
+                        System.out.println("El total es de: " + total);
                     } else {
                         System.out.println("Fuera de rango");
                     }
