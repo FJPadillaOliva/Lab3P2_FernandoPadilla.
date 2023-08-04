@@ -180,16 +180,24 @@ public class Lab3P2_FernandoPadilla {
                                     vehiculos.get(index).setAño(fechaV);
                                     break;
                                 case 7:
-                                    
+                                    System.out.println("Ingrese el tipo de combustible nuevo: ");
+                                    String tipoC = read.next();
+                                    ((Automovil)vehiculos.get(index)).setTipoC(tipoC);
                                     break;
                                 case 8:
-
+                                    System.out.println("Ingrese el numero de puertas: ");
+                                    int numP = read.nextInt();
+                                    ((Automovil)vehiculos.get(index)).setNumP(numP);
                                     break;
                                 case 9:
-
+                                    System.out.println("Ingrese el tipo de transmision: ");
+                                    String tipoT = read.next();
+                                    ((Automovil)vehiculos.get(index)).setTipoT(tipoT);
                                     break;
                                 case 10:
-
+                                    System.out.println("Ingrese el numero de asientos: ");
+                                    int numA = read.nextInt();
+                                    ((Automovil)vehiculos.get(index)).setNumA(numA);
                                     break;
                                 default:
                                     System.out.println("Opcion no valida");
@@ -246,23 +254,18 @@ public class Lab3P2_FernandoPadilla {
                                     break;
                                 case 7:
                                     System.out.println("Ingrese el tipo de combustible nuevo: ");
-                                    String tipoC = read.next();
-                                    ((Automovil)vehiculos.get(index)).setTipoC(tipoC);
+                                    Double velocidadM = read.nextDouble();
+                                    ((Motocicleta)vehiculos.get(index)).setVelocidadM(velocidadM);
                                     break;
                                 case 8:
                                     System.out.println("Ingrese el numero de puertas: ");
-                                    int numP = read.nextInt();
-                                    ((Automovil)vehiculos.get(index)).setNumP(numP);
+                                    double peso = read.nextDouble();
+                                    ((Motocicleta)vehiculos.get(index)).setPeso(peso);
                                     break;
                                 case 9:
-                                    System.out.println("Ingrese el tipo de transmision: ");
-                                    String tipoT = read.next();
-                                    ((Automovil)vehiculos.get(index)).setTipoT(tipoT);
-                                    break;
-                                case 10:
-                                    System.out.println("Ingrese el numero de asientos: ");
-                                    int numA = read.nextInt();
-                                    ((Automovil)vehiculos.get(index)).setNumA(numA);
+                                    System.out.println("Ingrese el consumo: ");
+                                    Double consumo = read.nextDouble();
+                                    ((Motocicleta)vehiculos.get(index)).setConsumo(consumo);
                                     break;
                                 default:
                                     System.out.println("Opcion no valida");
@@ -318,16 +321,19 @@ public class Lab3P2_FernandoPadilla {
                                     vehiculos.get(index).setAño(fechaV);
                                     break;
                                 case 7:
-
+                                    System.out.println("Ingrese la capacidad de pasajeros: ");
+                                    int numeroP = read.nextInt();
+                                    ((Autobus)vehiculos.get(index)).setNumeroP(numeroP);
                                     break;
                                 case 8:
-
+                                    System.out.println("Ingrese el numero de ejes: ");
+                                    int numeroE = read.nextInt();
+                                    ((Autobus)vehiculos.get(index)).setNumeroE(numeroE);
                                     break;
                                 case 9:
-
-                                    break;
-                                case 10:
-
+                                    System.out.println("Ingrese la longitud: ");
+                                    double longitud = read.nextDouble();
+                                    ((Autobus)vehiculos.get(index)).setLongitud(longitud);
                                     break;
                                 default:
                                     System.out.println("Opcion no valida");
@@ -344,7 +350,7 @@ public class Lab3P2_FernandoPadilla {
                         lista += vehiculos.indexOf(t) + ".- " + t;
                     }
                     System.out.println(lista);
-                    System.out.println("Ingrese el indice a modificar: ");
+                    System.out.println("Ingrese el indice a eliminar: ");
                     index = read.nextInt();
                     if (index >= 0 && index < vehiculos.size()) {
                         vehiculos.remove(index);
@@ -354,10 +360,31 @@ public class Lab3P2_FernandoPadilla {
                     }
                     break;
                 case 4:
-
+                    lista = "";
+                    for (Vehiculo t : vehiculos) {
+                        lista += vehiculos.indexOf(t) + ".- " + t;
+                    }
+                    System.out.println(lista);
                     break;
                 case 5:
-
+                    lista = "";
+                    for (Vehiculo t : vehiculos) {
+                        lista += vehiculos.indexOf(t) + ".- " + t;
+                    }
+                    System.out.println(lista);
+                    System.out.println("Ingrese el indice del vehiculo para generar la boleta: ");
+                    index = read.nextInt();
+                    if (index >= 0 && index < vehiculos.size()) {
+                        if (vehiculos.get(index) instanceof Automovil) {
+                            
+                        }else if(vehiculos.get(index) instanceof Motocicleta){
+                            
+                        }else if(vehiculos.get(index) instanceof Autobus){
+                            
+                        }
+                    }else{
+                        System.out.println("Fuera de rango");
+                    }
                     break;
                 case 6:
                     opcion = 6;

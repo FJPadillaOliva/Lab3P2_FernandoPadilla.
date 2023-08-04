@@ -57,7 +57,7 @@ public class Automovil extends Vehiculo {
 
     @Override
     public String toString() {
-        return "Automovil{" + "tipoC=" + tipoC + ", numP=" + numP + ", tipoT=" + tipoT + ", numA=" + numA + '}';
+        return "Marca =" + getMarca() + ", modelo = "+ getModelo()+ ", placa = " + getPlaca() + ", tipo = " + getTipo();
     }
     
     

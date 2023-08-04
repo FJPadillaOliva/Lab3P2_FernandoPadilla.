@@ -45,7 +45,7 @@ public class Autobus extends Vehiculo{
 
     @Override
     public String toString() {
-        return "Autobus{" + "numeroP=" + numeroP + ", numeroE=" + numeroE + ", longitud=" + longitud + '}';
+        return "Marca =" + getMarca() + ", modelo = "+ getModelo()+ ", placa = " + getPlaca() + ", tipo = " + getTipo();
     }
     
     
