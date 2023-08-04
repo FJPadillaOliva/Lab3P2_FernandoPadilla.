@@ -145,25 +145,42 @@ public class Lab3P2_FernandoPadilla {
                             opcion2 = read.nextInt();
                             switch (opcion2) {
                                 case 1:
-
+                                    System.out.println("Ingrese la nueva placa: ");
+                                    String placa = read.next();
+                                    vehiculos.get(index).setPlaca(placa);
                                     break;
                                 case 2:
-
+                                    System.out.println("Ingrese la nueva marca: ");
+                                    read.nextLine();
+                                    String marca = read.nextLine();
+                                    read = new Scanner(System.in);
+                                    vehiculos.get(index).setMarca(marca);
                                     break;
                                 case 3:
-
+                                    System.out.println("Ingrese el nuevo modelo del vehiculo: ");
+                                    read.nextLine();
+                                    String modelo = read.nextLine();
+                                    read = new Scanner(System.in);
+                                    vehiculos.get(index).setModelo(modelo);
                                     break;
                                 case 4:
-
+                                    System.out.println("Ingrese el nuevo tipo del vehiculo: ");
+                                    String tipo = read.next();
+                                    vehiculos.get(index).setTipo(tipo);
                                     break;
                                 case 5:
-
+                                    System.out.println("Ingrese el nuevo color: ");
+                                    Color color = JColorChooser.showDialog(null, "Ingrese color", Color.yellow);
+                                    vehiculos.get(index).setColor(color);
                                     break;
                                 case 6:
-
+                                    System.out.println("Ingrese el año del vehiculo(dd/mm/yyyy): ");
+                                    String fecha = read.next();
+                                    Date fechaV = new Date(fecha);
+                                    vehiculos.get(index).setAño(fechaV);
                                     break;
                                 case 7:
-
+                                    
                                     break;
                                 case 8:
 
@@ -178,7 +195,7 @@ public class Lab3P2_FernandoPadilla {
                                     System.out.println("Opcion no valida");
                                     break;
                             }
-                        } else if (vehiculos.get(index) instanceof Automovil) {
+                        } else if (vehiculos.get(index) instanceof Motocicleta) {
                             System.out.println("Que desea modificar?: "
                                     + "1)Numero de placa\n"
                                     + "2)Marca\n"
@@ -193,40 +210,65 @@ public class Lab3P2_FernandoPadilla {
                             opcion2 = read.nextInt();
                             switch (opcion2) {
                                 case 1:
-
+                                    System.out.println("Ingrese la nueva placa: ");
+                                    String placa = read.next();
+                                    vehiculos.get(index).setPlaca(placa);
                                     break;
                                 case 2:
-
+                                    System.out.println("Ingrese la nueva marca: ");
+                                    read.nextLine();
+                                    String marca = read.nextLine();
+                                    read = new Scanner(System.in);
+                                    vehiculos.get(index).setMarca(marca);
                                     break;
                                 case 3:
-
+                                    System.out.println("Ingrese el nuevo modelo del vehiculo: ");
+                                    read.nextLine();
+                                    String modelo = read.nextLine();
+                                    read = new Scanner(System.in);
+                                    vehiculos.get(index).setModelo(modelo);
                                     break;
                                 case 4:
-
+                                    System.out.println("Ingrese el nuevo tipo del vehiculo: ");
+                                    String tipo = read.next();
+                                    vehiculos.get(index).setTipo(tipo);
                                     break;
                                 case 5:
-
+                                    System.out.println("Ingrese el nuevo color: ");
+                                    Color color = JColorChooser.showDialog(null, "Ingrese color", Color.yellow);
+                                    vehiculos.get(index).setColor(color);
                                     break;
                                 case 6:
-
+                                    System.out.println("Ingrese el año del vehiculo(dd/mm/yyyy): ");
+                                    String fecha = read.next();
+                                    Date fechaV = new Date(fecha);
+                                    vehiculos.get(index).setAño(fechaV);
                                     break;
                                 case 7:
-
+                                    System.out.println("Ingrese el tipo de combustible nuevo: ");
+                                    String tipoC = read.next();
+                                    ((Automovil)vehiculos.get(index)).setTipoC(tipoC);
                                     break;
                                 case 8:
-
+                                    System.out.println("Ingrese el numero de puertas: ");
+                                    int numP = read.nextInt();
+                                    ((Automovil)vehiculos.get(index)).setNumP(numP);
                                     break;
                                 case 9:
-
+                                    System.out.println("Ingrese el tipo de transmision: ");
+                                    String tipoT = read.next();
+                                    ((Automovil)vehiculos.get(index)).setTipoT(tipoT);
                                     break;
                                 case 10:
-
+                                    System.out.println("Ingrese el numero de asientos: ");
+                                    int numA = read.nextInt();
+                                    ((Automovil)vehiculos.get(index)).setNumA(numA);
                                     break;
                                 default:
                                     System.out.println("Opcion no valida");
                                     break;
                             }
-                        } else if (vehiculos.get(index) instanceof Automovil) {
+                        } else if (vehiculos.get(index) instanceof Autobus) {
                             System.out.println("Que desea modificar?: "
                                     + "1)Numero de placa\n"
                                     + "2)Marca\n"
@@ -241,22 +283,39 @@ public class Lab3P2_FernandoPadilla {
                             opcion2 = read.nextInt();
                             switch (opcion2) {
                                 case 1:
-
+                                    System.out.println("Ingrese la nueva placa: ");
+                                    String placa = read.next();
+                                    vehiculos.get(index).setPlaca(placa);
                                     break;
                                 case 2:
-
+                                    System.out.println("Ingrese la nueva marca: ");
+                                    read.nextLine();
+                                    String marca = read.nextLine();
+                                    read = new Scanner(System.in);
+                                    vehiculos.get(index).setMarca(marca);
                                     break;
                                 case 3:
-
+                                    System.out.println("Ingrese el nuevo modelo del vehiculo: ");
+                                    read.nextLine();
+                                    String modelo = read.nextLine();
+                                    read = new Scanner(System.in);
+                                    vehiculos.get(index).setModelo(modelo);
                                     break;
                                 case 4:
-
+                                    System.out.println("Ingrese el nuevo tipo del vehiculo: ");
+                                    String tipo = read.next();
+                                    vehiculos.get(index).setTipo(tipo);
                                     break;
                                 case 5:
-
+                                    System.out.println("Ingrese el nuevo color: ");
+                                    Color color = JColorChooser.showDialog(null, "Ingrese color", Color.yellow);
+                                    vehiculos.get(index).setColor(color);
                                     break;
                                 case 6:
-
+                                    System.out.println("Ingrese el año del vehiculo(dd/mm/yyyy): ");
+                                    String fecha = read.next();
+                                    Date fechaV = new Date(fecha);
+                                    vehiculos.get(index).setAño(fechaV);
                                     break;
                                 case 7:
 
