@@ -200,7 +200,7 @@ public class Lab3P2_FernandoPadilla {
                     int index = read.nextInt();
                     if (index >= 0 && index < vehiculos.size()) {
                         if (vehiculos.get(index) instanceof Automovil) {
-                            System.out.println("Que desea modificar?: "
+                            System.out.println("Que desea modificar?:\n "
                                     + "1)Numero de placa\n"
                                     + "2)Marca\n"
                                     + "3)Modelo\n"
