@@ -124,16 +124,165 @@ public class Lab3P2_FernandoPadilla {
                 case 2:
                     lista = "";
                     for (Vehiculo t : vehiculos) {
-                        lista += vehiculos.indexOf(t)+ ".- " + t;
+                        lista += vehiculos.indexOf(t) + ".- " + t;
                     }
                     System.out.println(lista);
                     System.out.println("Ingrese el indice a modificar: ");
                     int index = read.nextInt();
+                    if (index >= 0 && index < vehiculos.size()) {
+                        if (vehiculos.get(index) instanceof Automovil) {
+                            System.out.println("Que desea modificar?: "
+                                    + "1)Numero de placa\n"
+                                    + "2)Marca\n"
+                                    + "3)Modelo\n"
+                                    + "4)Tipo\n"
+                                    + "5)Color\n"
+                                    + "6)Año\n"
+                                    + "7)Tipo de combustible\n"
+                                    + "8)Numero de puertas\n"
+                                    + "9)Tipo de transmision\n"
+                                    + "10)Numero de asientos");
+                            opcion2 = read.nextInt();
+                            switch (opcion2) {
+                                case 1:
+
+                                    break;
+                                case 2:
+
+                                    break;
+                                case 3:
+
+                                    break;
+                                case 4:
+
+                                    break;
+                                case 5:
+
+                                    break;
+                                case 6:
+
+                                    break;
+                                case 7:
+
+                                    break;
+                                case 8:
+
+                                    break;
+                                case 9:
+
+                                    break;
+                                case 10:
+
+                                    break;
+                                default:
+                                    System.out.println("Opcion no valida");
+                                    break;
+                            }
+                        } else if (vehiculos.get(index) instanceof Automovil) {
+                            System.out.println("Que desea modificar?: "
+                                    + "1)Numero de placa\n"
+                                    + "2)Marca\n"
+                                    + "3)Modelo\n"
+                                    + "4)Tipo\n"
+                                    + "5)Color\n"
+                                    + "6)Año\n"
+                                    + "7)Tipo de combustible\n"
+                                    + "8)Numero de puertas\n"
+                                    + "9)Tipo de transmision\n"
+                                    + "10)Numero de asientos");
+                            opcion2 = read.nextInt();
+                            switch (opcion2) {
+                                case 1:
+
+                                    break;
+                                case 2:
+
+                                    break;
+                                case 3:
+
+                                    break;
+                                case 4:
+
+                                    break;
+                                case 5:
+
+                                    break;
+                                case 6:
+
+                                    break;
+                                case 7:
+
+                                    break;
+                                case 8:
+
+                                    break;
+                                case 9:
+
+                                    break;
+                                case 10:
+
+                                    break;
+                                default:
+                                    System.out.println("Opcion no valida");
+                                    break;
+                            }
+                        } else if (vehiculos.get(index) instanceof Automovil) {
+                            System.out.println("Que desea modificar?: "
+                                    + "1)Numero de placa\n"
+                                    + "2)Marca\n"
+                                    + "3)Modelo\n"
+                                    + "4)Tipo\n"
+                                    + "5)Color\n"
+                                    + "6)Año\n"
+                                    + "7)Tipo de combustible\n"
+                                    + "8)Numero de puertas\n"
+                                    + "9)Tipo de transmision\n"
+                                    + "10)Numero de asientos");
+                            opcion2 = read.nextInt();
+                            switch (opcion2) {
+                                case 1:
+
+                                    break;
+                                case 2:
+
+                                    break;
+                                case 3:
+
+                                    break;
+                                case 4:
+
+                                    break;
+                                case 5:
+
+                                    break;
+                                case 6:
+
+                                    break;
+                                case 7:
+
+                                    break;
+                                case 8:
+
+                                    break;
+                                case 9:
+
+                                    break;
+                                case 10:
+
+                                    break;
+                                default:
+                                    System.out.println("Opcion no valida");
+                                    break;
+                            }
+                        }
+                    } else {
+                        System.out.println("Fuera de rango");
+                    }
                     break;
                 case 3:
                     lista = "";
                     for (Vehiculo t : vehiculos) {
-                        lista += vehiculos.indexOf(t)+ ".- " + t;
+                        lista += vehiculos.indexOf(t) + ".- " + t;
                     }
                     System.out.println(lista);
                     System.out.println("Ingrese el indice a modificar: ");
@@ -141,15 +290,15 @@ public class Lab3P2_FernandoPadilla {
                     if (index >= 0 && index < vehiculos.size()) {
                         vehiculos.remove(index);
                         System.out.println("Eliminado con exito");
-                    }else{
+                    } else {
                         System.out.println("Fuera de rango");
                     }
                     break;
                 case 4:
-                    
+
                     break;
                 case 5:
-                    
+
                     break;
                 case 6:
                     opcion = 6;
