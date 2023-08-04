@@ -14,7 +14,7 @@ public class Lab3P2_FernandoPadilla {
         ArrayList<Vehiculo> vehiculos = new ArrayList();
         int opcion = 0;
         int opcion2 = 0;
-
+        String lista = "";
         do {
             System.out.println("------------Menu------------\n"
                     + "1)Agregar\n"
@@ -63,15 +63,96 @@ public class Lab3P2_FernandoPadilla {
                             System.out.println("Agregado con exito");
                             break;
                         case 2:
-
+                            System.out.println("Ingrese la placa del vehiculo: ");
+                            placa = read.next();
+                            System.out.println("Ingrese la marca del vehiculo: ");
+                            read.nextLine();
+                            marca = read.nextLine();
+                            read = new Scanner(System.in);
+                            System.out.println("Ingrese el modelo del vehiculo: ");
+                            read.nextLine();
+                            modelo = read.nextLine();
+                            read = new Scanner(System.in);
+                            System.out.println("Ingrese el tipo de vehiculo: ");
+                            tipo = read.next();
+                            System.out.println("Ingrese el color:");
+                            color = JColorChooser.showDialog(null, "Ponga un color", Color.yellow);
+                            System.out.println("Ingrese el año del vehiculo(dd/mm/yyyy): ");
+                            fecha = read.next();
+                            fechaV = new Date(fecha);
+                            System.out.println("Ingrese la velocidad maxima de la motocicleta: ");
+                            double velocidadM = read.nextDouble();
+                            System.out.println("Ingrese el peso de la motocicleta: ");
+                            double peso = read.nextDouble();
+                            System.out.println("Ingrese el consumo de la motocicleta: ");
+                            double consumo = read.nextDouble();
+                            vehiculos.add(new Motocicleta(velocidadM, peso, consumo, placa, marca, modelo, tipo, color, fechaV));
+                            System.out.println("Agregado con exito");
                             break;
                         case 3:
-
+                            System.out.println("Ingrese la placa del vehiculo: ");
+                            placa = read.next();
+                            System.out.println("Ingrese la marca del vehiculo: ");
+                            read.nextLine();
+                            marca = read.nextLine();
+                            read = new Scanner(System.in);
+                            System.out.println("Ingrese el modelo del vehiculo: ");
+                            read.nextLine();
+                            modelo = read.nextLine();
+                            read = new Scanner(System.in);
+                            System.out.println("Ingrese el tipo de vehiculo: ");
+                            tipo = read.next();
+                            System.out.println("Ingrese el color:");
+                            color = JColorChooser.showDialog(null, "Ponga un color", Color.yellow);
+                            System.out.println("Ingrese el año del vehiculo(dd/mm/yyyy): ");
+                            fecha = read.next();
+                            fechaV = new Date(fecha);
+                            System.out.println("Ingrese la cantidad de pasajeros: ");
+                            int numeroP = read.nextInt();
+                            System.out.println("Ingrese el numero de ejes: ");
+                            int numeroE = read.nextInt();
+                            System.out.println("Ingrese la longitud del autobus: ");
+                            double longitud = read.nextDouble();
+                            vehiculos.add(new Autobus(numeroP, numeroE, longitud, placa, marca, modelo, tipo, color, fechaV));
+                            System.out.println("Agregado con exito");
                             break;
                         default:
                             System.out.println("Opcion no valida");
                             break;
                     }
+                    break;
+                case 2:
+                    lista = "";
+                    for (Vehiculo t : vehiculos) {
+                        lista += vehiculos.indexOf(t)+ ".- " + t;
+                    }
+                    System.out.println(lista);
+                    System.out.println("Ingrese el indice a modificar: ");
+                    int index = read.nextInt();
+                    break;
+                case 3:
+                    lista = "";
+                    for (Vehiculo t : vehiculos) {
+                        lista += vehiculos.indexOf(t)+ ".- " + t;
+                    }
+                    System.out.println(lista);
+                    System.out.println("Ingrese el indice a modificar: ");
+                    index = read.nextInt();
+                    if (index >= 0 && index < vehiculos.size()) {
+                        vehiculos.remove(index);
+                        System.out.println("Eliminado con exito");
+                    }else{
+                        System.out.println("Fuera de rango");
+                    }
+                    break;
+                case 4:
+                    
+                    break;
+                case 5:
+                    
+                    break;
+                case 6:
+                    opcion = 6;
                     break;
             }
         } while (opcion != 6);
