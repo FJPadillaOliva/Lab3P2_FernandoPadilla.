@@ -1,8 +1,11 @@
 
 package lab3p2_fernandopadilla;
 
+import java.awt.Color;
+import java.util.Date;
 
-public class Automovil {
+
+public class Automovil extends Vehiculo {
     private String tipoC;
     private int numP;
     private String tipoT;
@@ -11,12 +14,14 @@ public class Automovil {
     public Automovil() {
     }
 
-    public Automovil(String tipoC, int numP, String tipoT, int numA) {
+    public Automovil(String tipoC, int numP, String tipoT, int numA, String placa, String marca, String modelo, String tipo, Color color, Date año) {
+        super(placa, marca, modelo, tipo, color, año);
         this.tipoC = tipoC;
         this.numP = numP;
         this.tipoT = tipoT;
         this.numA = numA;
     }
+
 
     public String getTipoC() {
         return tipoC;
